@@ -45,6 +45,8 @@ public enum FolioReaderScrollDirection: Int {
  Eg. A ClassBasedOnClickListener with the className `quote` and parameterName `id` with the given epub html content `<section class="quote" id="12345">` would call the given closure on a click on this section with the String `12345` as parameter.
  */
 public struct ClassBasedOnClickListener {
+    
+    var translate: ((_ sentence: String) -> Void)?
 
     /// The name of the URL scheme which should be used. Note: Make sure that the given `String` is a valid as scheme name.
     public var schemeName: String
